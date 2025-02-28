@@ -1,9 +1,7 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import menuItems from "./menuItems";
-
 const Navbar = () => {
   const router = useRouter();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -14,13 +12,18 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="relative z-50 flex items-center justify-between px-6 py-4 bg-white shadow-md">
-      <div className="text-xl font-bold cursor-pointer" onClick={() => router.push("/")}>
-        avacasalife
+    <nav className="flex items-center justify-between px-6 py-4 font-semibold shadow-md bg-opacity-50 text-white relative z-50">
+      {/* Logo */}
+      <div
+        className="text-xl font-bold cursor-pointer"
+        onClick={() => router.push("/")}
+      >
+        Avacasa
       </div>
 
-      <div className="flex space-x-6 relative">
-        {isClient && 
+      {/* Navigation Menu */}
+      <div className="flex space-x-6">
+        {isClient &&
           menuItems.map((item) => (
             <div
               key={item.name}
@@ -35,8 +38,9 @@ const Navbar = () => {
                 {item.name} {item.subMenu && <span className="ml-1">▼</span>}
               </button>
 
+              {/* Dropdown Menu */}
               {item.subMenu && openDropdown === item.name && (
-                <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md border border-gray-200 z-50">
+                <div className="absolute left-0 mt-2 w-64 bg-white text-black shadow-lg rounded-md border border-gray-200">
                   {item.subMenu.map((subItem) => (
                     <button
                       key={subItem.path}
@@ -50,10 +54,11 @@ const Navbar = () => {
               )}
             </div>
           ))}
-        
+
+        {/* Login Button */}
         <button
           onClick={() => router.push("/signup")}
-          className="flex items-center border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-100"
+          className="flex items-center border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-100 text-black bg-white"
         >
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwG8iobF01TZFz9kenNV1ZOpF9KPioMBNzA&s"
@@ -67,4 +72,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar
