@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "img": "https://www.compass.com/m/0/68ba6f60-2914-46ff-9ccc-3277b9222ac8/1500x998.jpg",
+    "price": "$1,150,000",
+    "location": "6005 Mimosa Lane, Dallas, TX 75230",
+    "beds": 3,
+    "baths": 3,
+    "sqft": "2,061 Sq. Ft."
+  },
+  {
+    "id": 2,
+    "img": "https://www.compass.com/m/0/5e7ebc7f-d160-4984-8050-a6b1e2e12656/1334x1000.jpg",
+    "price": "$3,495,000",
+    "location": "6 White Birch Lane, Barrington, RI 02806",
+    "beds": 5,
+    "baths": 6,
+    "sqft": "4,998 Sq. Ft."
+  },
+  {
+    "id": 3,
+    "img": "https://www.compass.com/m/0/52263bb7-a7d2-478c-8d91-4fcf8a4d722b/1500x996.jpg",
+    "price": "$2,400,000",
+    "location": "2509 Montrose Court, Charlotte, NC 29207",
+    "beds": 5,
+    "baths": 6,
+    "sqft": "4,252 Sq. Ft."
+  }
+]
